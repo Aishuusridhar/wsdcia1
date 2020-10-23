@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/bookshopschema"
+ xmlns:tns="http://www.example.org/bookshopschema" elementFormDefault="qualified">
+ 
+ 
+<element name="companylist">
+<complexType>
+<sequence>
+<element name="employee" maxOccurs="unbounded">
+<complexType>
+<sequence>
+
+<element name="emp-id" type="integer"/>
+<element name="emp-name" type="string"/>
+<element name="emp-age" type="integer"/>
+<element name="emp-salary" type="Mysal"/>
+<element name="emp-emailid" type="string"/>
+<element name="emp-phonenum" type="integer"/>
+<element name="emp-designation" type="string"/>
+
+</sequence>
+</complexType>
+</element>
+</sequence>
+</complexType>
+</element>
+
+
+<simpleType name="Mysal">
+<restriction base="integer">
+<minExclusive value="50000"></minExclusive>
+<maxExclusive value="200000"></maxExclusive>
+</restriction>
+</simpleType>
+
+
+
+</schema>
+ 
+ 
